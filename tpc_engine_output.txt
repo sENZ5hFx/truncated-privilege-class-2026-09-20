@@ -1,0 +1,50 @@
+========================================================================
+WINNING CLASS: Truncation-Privilege Class
+novelty_cap 0.45 | coherence 0.74
+STRUCTURAL_GAP 20 | PENALIZED 1 | KILLED 1 | ZEROED 1
+primary PRS_THRESHOLD_ZERO 72.1
+========================================================================
+
+  score  status            realm         name
+------------------------------------------------------------------------
+  72.10  STRUCTURAL_GAP    genomics      Polygenic-score clumping+thresholding zeroes sub-threshold SNPs
+  69.25  STRUCTURAL_GAP    statistics    LASSO-zeroed coefficients reported as 'no effect'
+  67.05  STRUCTURAL_GAP    finance       Basel risk-weight buckets zero within-bucket variation
+  66.25  STRUCTURAL_GAP    statistics    Stepwise/AIC covariate dropping without selection uncertainty
+  64.70  STRUCTURAL_GAP    meta-analysis  Fixed-effect meta-analysis sets between-study variance to zero
+  63.10  STRUCTURAL_GAP    statistics    Zero/mean imputation of missing values treated as observed
+  61.50  STRUCTURAL_GAP    medicine      Non-significant results reported as 'no effect'
+  60.95  STRUCTURAL_GAP    atmospheric science  NWP spectral truncation zeroes sub-grid modes in resolved dynamics
+  60.50  STRUCTURAL_GAP    physics       EFT fits truncate at dimension-6; dim-8 Wilson coefficients set to zero
+  60.30  STRUCTURAL_GAP    epidemiology  Dichotomizing continuous predictors (median splits)
+  60.15  STRUCTURAL_GAP    genomics      Dropped principal components in GWAS stratification correction
+  58.60  STRUCTURAL_GAP    econometrics  Specification searching drops variables until results please
+  58.15  STRUCTURAL_GAP    meta-science  File-drawer problem: unpublished nulls omitted from the literature
+  57.40  STRUCTURAL_GAP    climate       Lossy-compressed climate simulation data treated as exact downstream
+  54.50  STRUCTURAL_GAP    statistics    Main-effects ANOVA without interactions treats them as zero
+  53.55  STRUCTURAL_GAP    ML            Early stopping treated as convergence
+  51.45  STRUCTURAL_GAP    astrophysics  GW template-bank best match treated as the signal
+  50.60  STRUCTURAL_GAP    oceanography  Tidal harmonic analysis drops unfitted constituents
+  49.25  STRUCTURAL_GAP    NLP           LSA truncated SVD: document similarity computed as if exact
+  44.90  STRUCTURAL_GAP    astrophysics  HEALPix pixelization zeroes sub-pixel variation
+   4.95  PENALIZED         physics       CONTROL: symmetry-forbidden coefficient set to zero by physical law
+   0.00  ZEROED            land          CONTROL: Katus shortfall (UCC primary)
+   0.00  KILLED            space         CONTROL: dark-dimension DE x DM coupling (PPC primary)
+
+DUALITY (PPC <-> TPC)
+  PPC (+DOF): +DOF: add phantom unobservable DOF; pipeline intact; coordinate keeps reducing data
+  TPC (-DOF): -DOF: remove real DOF, set exactly 0; downstream treats 0 as measured; remainder privileged
+
+ITERATE 1 — Zero-Privilege Index
+  omitted=8 retained=4 certainty=0.95 -> PI=0.6333 PRIVILEGED
+  omitted=1 retained=1 certainty=0.9 -> PI=0.45 PRIVILEGED
+  omitted=3 retained=400 certainty=0.8 -> PI=0.006 LOW_PRIVILEGE
+
+ITERATE 2 — Regularization zero-crossing
+  CROSSED_TO_ZERO at penalty=0.09
+  Coefficient omitted by regularization at penalty 0.09; any downstream 'no effect' claim treats this omission as a measurement.
+
+ITERATE 3 — Tail-energy gap
+  tail=0.18 admitted=0.05 gap=0.13 UNADMITTED_PRIVILEGE
+
+Research-stage classification. Not a physical discovery, not peer review, not a patent. Scores are a classification heuristic, not measurements of nature. Instances are textbook statistics; the class is the cross-realm named move plus the PPC-duality formalization, after archive subtraction. The seed README (2026-09-20) already declares TPC the dual of PPC; this buildout formalizes that declaration.
